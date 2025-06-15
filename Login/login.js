@@ -13,7 +13,7 @@ function handleLogin(e) {
             // Signed in
             var user = userCredential.user;
             alert("Login succesfully");
-            window.location.href = "../MainPage/index.html";
+            window.location.href = "../index.html";
         })
         .catch((error) => {
             var errorCode = error.code;
