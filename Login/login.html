@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteWebSite</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- Left side: navigation links -->
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+        </ul>
+        <!-- Right side: auth buttons -->
+        <div class="auth-buttons" id="auth-buttons">
+            <a href="../Register/register.html" class="register-button">Register</a>
+            <a href="./login.html" class="login-button">Login</a>
+        </div>
+    </div>
+    <!-- Login Form -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/login" method="post" id="login-Form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="inp-Email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="inp-Password" placeholder="Enter your password" required>
+
+            <input type="submit" value="Login">
+            <p>Don't have an account? <a href="codeD3(1).html">Sign Up here</a></p>
+        </form>
+    </div>
+    <div class="stars"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <script src="login.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore-compat.js"></script>
+    <script src="../firebase-config.js"></script>
+</body>
+
+</html>

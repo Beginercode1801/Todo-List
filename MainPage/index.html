@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteWebSite</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main>
+        <div class="navbar">
+            <!-- Left side: navigation links -->
+            <ul class="nav-links">
+                <li class="Navbar"><a href="#home" class="active">Home</a></li>
+                <li class="Navbar"><a href="#statistics">Statistics</a></li>
+            </ul>
+            <!-- Right side: auth buttons -->
+            <div class="auth-buttons" id="auth-buttons">
+                <a href="../Login/login.html" class="login-button">Log out</a>
+            </div>
+        </div>
+        <div id="todo-container">
+            <h1>To-Do List</h1>
+            <form id="add-container">
+                <input type="text" id="todo-input" placeholder="Add a new task..." />
+                <div id="Tag">
+                    <div class="tag">
+                        <h4>Quan trọng</h3>
+                            <select name="important" id="important">
+                                <option value="yes">Có</option>
+                                <option value="no">Không</option>
+                            </select>
+                    </div>
+                    <div class="tag">
+                        <h4>Gấp</h3>
+                            <select name="urgent" id="urgent">
+                                <option value="yes">Có</option>
+                                <option value="no">Không</option>
+                            </select>
+                    </div>
+                </div>
+                <button type="button" onclick="addTask()" id="add-button">Tạo kế hoạch</button>
+            </form>
+            <ul id="todo-list">
+                <!-- To-Do List items will appear here -->
+            </ul>
+        </div>
+        <div id="Y_Y">
+            <h3>Việc khẩn cấp cần làm ngay</h3>
+            <div class="color-box" id="urgent-important"></div>
+        </div>
+        <div id="Y_N">
+            <h3>Việc quan trọng – làm sau</h3>
+            <div class="color-box" id="Important"></div>
+        </div>
+        <div id="N_Y">
+            <h3>Việc gấp nhưng không quá cần thiết</h3>
+            <div class="color-box" id="Urgent"></div>
+        </div>
+        <div id="N_N">
+            <h3>Việc phụ – làm lúc rảnh</h3>
+            <div class="color-box" id="normal"></div>
+        </div>
+
+
+        <script src="index.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore-compat.js"></script>
+        <script src="../firebase-config.js"></script>
+    </main>
+</body>
+<footer>
+    &copy; 2025 To-Do App by ThaiSon
+    <a href="https://guns.lol/xeno1801">Trang cá nhân</a> |
+    <a href="0329057805">Liên hệ</a>
+</footer>
+
+</html>

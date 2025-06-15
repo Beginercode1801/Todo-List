@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+/* Navbar container */
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation links (left side) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 3px;
+}
+
+/* Auth buttons (right side) */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Specific styles for Register and Login buttons */
+.register-button {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.register-button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.login-button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+}
+
+.login-button:hover {
+    background-color: #e65c00;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Main container of the To-Do list */
+#todo-list {
+    height: 255px;
+    overflow-y: scroll;
+}
+
+#todo-container {
+    margin-top: 100px;
+    margin-left: 100px;
+    background-color: #fff;
+    padding: 20px;
+    width: 380px;
+    height: 510px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input and button styling */
+#todo-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#add-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#add-button:hover {
+    background-color: #45a049;
+}
+
+/* To-Do list styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* Task text styles */
+.task-text {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.tag {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    h4 {
+        margin-right: 7px;
+    }
+
+    #important-N {
+        margin-left: 8px;
+    }
+
+    #urgent-N {
+        margin-left: 8px;
+    }
+}
+
+p {
+    text-align: left;
+    /* margin-right: 60px; */
+    margin-bottom: 10px;
+}
+
+.color-box {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    line-height: 40px;
+    color: white;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#Y_Y {
+    color: #ffffff;
+    margin-top: -520px;
+    margin-left: 550px;
+
+    #urgent-important {
+        background-color: #e74c3c;
+        height: 200px;
+        overflow-y: scroll;
+    }
+}
+
+#Y_N {
+    color: #ffffff;
+    margin-top: -240px;
+    margin-left: 1050px;
+
+    #Important {
+        background-color: #e67e22;
+        height: 200px;
+        overflow-y: scroll;
+    }
+}
+
+#N_Y {
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: 550px;
+
+    #Urgent {
+        background-color: #f1c40f;
+        height: 200px;
+        overflow-y: scroll;
+    }
+}
+
+#N_N {
+    color: #ffffff;
+    margin-top: -245px;
+    margin-left: 1050px;
+
+    #normal {
+        background-color: #2ecc71;
+        height: 200px;
+        overflow-y: scroll;
+    }
+}
+
+#delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+footer a:hover {
+  color: #fff;
+}
